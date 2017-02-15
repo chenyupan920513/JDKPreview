@@ -20,4 +20,5 @@ public enum Color {
 	private int redValue; // 自定义数据域，private为了封装。
 	private int greenValue;
 	private int blueValue;
+
 }

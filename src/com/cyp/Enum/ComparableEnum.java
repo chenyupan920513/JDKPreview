@@ -10,6 +10,7 @@ public class ComparableEnum{
         t.add(Color.GREEN) ;    // 加入绿色
         t.add(Color.RED) ;        // 加入红色
         t.add(Color.BLUE) ;        // 加入蓝色
+        t.add(Color.GREEN);
         Iterator<Color> iter = t.iterator() ;
         while(iter.hasNext()){
             System.out.print(iter.next() + "、") ;

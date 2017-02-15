@@ -1,19 +1,20 @@
 package com.cyp.annotation;
 import java.lang.reflect.Field;
 
-import com.cyp.annotation.FruitColor;
-import com.cyp.annotation.FruitName;
-import com.cyp.annotation.FruitProvider;
-
-
-/***********注解处理器***************/
+/**
+ * 
+ * @author pierre
+ * @Date  2017-2-15
+ * @version  V1.0
+ *
+ */
 
 public class FruitInfoUtil {
     public static void getFruitInfo(Class<?> clazz){
         
-        String strFruitName=" 水果名称：";
-        String strFruitColor=" 水果颜色：";
-        String strFruitProvicer="供应商信息：";
+        String strFruitName="name of fruit: ";
+        String strFruitColor="color of fruit: ";
+        String strFruitProvicer="provider of fruit: ";
         
         Field[] fields = clazz.getDeclaredFields();
         
@@ -30,7 +31,7 @@ public class FruitInfoUtil {
             }
             else if(field.isAnnotationPresent(FruitProvider.class)){
                 FruitProvider fruitProvider= (FruitProvider) field.getAnnotation(FruitProvider.class);
-                strFruitProvicer=" 供应商编号："+fruitProvider.id()+" 供应商名称："+fruitProvider.name()+" 供应商地址："+fruitProvider.address();
+                strFruitProvicer=" provider_id = "+fruitProvider.id()+" ==providerName ="+fruitProvider.name()+"==provider_address = "+fruitProvider.address();
                 System.out.println(strFruitProvicer);
             }
         }

@@ -1,7 +1,5 @@
 package com.cyp.Enum;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class GetColor {
 
@@ -11,6 +9,7 @@ public class GetColor {
 		System.out.println(color); // 调用了toString()方法
 		System.out.println(Color.BLACK.ordinal());
 		System.out.println(Color.BLACK.compareTo(Color.RED));
-		Map  map = new HashMap();
+		System.out.println(Color.BLACK.toString());
+		
 	}
 }

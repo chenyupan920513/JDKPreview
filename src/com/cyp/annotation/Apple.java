@@ -2,7 +2,6 @@ package com.cyp.annotation;
 
 import com.cyp.annotation.FruitColor.Color;
 
-/***********注解使用***************/
 
 public class Apple {
     
@@ -12,7 +11,7 @@ public class Apple {
     @FruitColor(fruitColor=Color.RED)
     private String appleColor;
     
-    @FruitProvider(id=1,name="陕西红富士集团",address="陕西省西安市延安路89号红富士大厦")
+    @FruitProvider(id=1,name="pierre",address="room201锛宐uildingNo.3,No.12锛宯anjingroad锛孊aoShanDistrict ")
     private String appleProvider;
     
     public void setAppleColor(String appleColor) {
@@ -37,6 +36,6 @@ public class Apple {
     }
     
     public void displayName(){
-        System.out.println("水果的名字是：苹果");
+        System.out.println(this.appleName);
     }
 }

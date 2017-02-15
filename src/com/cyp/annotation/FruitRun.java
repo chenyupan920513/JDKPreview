@@ -1,17 +1,18 @@
 package com.cyp.annotation;
-import com.cyp.annotation.Apple;
 
-
-/***********Êä³ö½á¹û***************/
+/**
+ * 
+ * @author pierre
+ * @Date 2017-2-15
+ * @version v1.0
+ * 
+ */
 public class FruitRun {
 
-    /**
-     * @param args
-     */
-    public static void main(String[] args) {
-        
-        FruitInfoUtil.getFruitInfo(Apple.class);
-        
-    }
+	public static void main(String[] args) {
+
+		FruitInfoUtil.getFruitInfo(Apple.class);
+
+	}
 
 }
