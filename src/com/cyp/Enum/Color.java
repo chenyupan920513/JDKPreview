@@ -5,19 +5,19 @@ public enum Color {
 	RED(255, 0, 0), BLUE(0, 0, 255), BLACK(0, 0, 0), YELLOW(255, 255, 0), GREEN(
 			0, 255, 0);
 
-	// ¹¹ÔìÃ¶¾ÙÖµ£¬±ÈÈçRED(255,0,0)
+	// æ„é€ æšä¸¾å€¼ï¼Œæ¯”å¦‚RED(255,0,0)
 	private Color(int rv, int gv, int bv) {
 		this.redValue = rv;
 		this.greenValue = gv;
 		this.blueValue = bv;
 	}
 
-	public String toString() { // ¸²¸ÇÁË¸¸ÀàEnumµÄtoString()
+	public String toString() { // è¦†ç›–äº†çˆ¶ç±»Enumçš„toString()
 		return super.toString() + "(" + redValue + "," + greenValue + ","
 				+ blueValue + ")";
 	}
 
-	private int redValue; // ×Ô¶¨ÒåÊı¾İÓò£¬privateÎªÁË·â×°¡£
+	private int redValue; // è‡ªå®šä¹‰æ•°æ®åŸŸï¼Œprivateä¸ºäº†å°è£…ã€‚
 	private int greenValue;
 	private int blueValue;
 }
