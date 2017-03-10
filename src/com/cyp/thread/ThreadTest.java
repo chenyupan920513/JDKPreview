@@ -8,21 +8,21 @@ public class ThreadTest {
 
     public static void main(String[] args) {
 
-        Callable<Integer> myCallable = new MyCallable();    // ´´½¨MyCallable¶ÔÏó
-        FutureTask<Integer> ft = new FutureTask<Integer>(myCallable); //Ê¹ÓÃFutureTaskÀ´°ü×°MyCallable¶ÔÏó
+        Callable<Integer> myCallable = new MyCallable();    // ï¿½ï¿½ï¿½ï¿½MyCallableï¿½ï¿½ï¿½ï¿½
+        FutureTask<Integer> ft = new FutureTask<Integer>(myCallable); //Ê¹ï¿½ï¿½FutureTaskï¿½ï¿½ï¿½ï¿½×°MyCallableï¿½ï¿½ï¿½ï¿½
 
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName() + " " + i);
             if (i == 30) {
-                Thread thread = new Thread(ft);   //FutureTask¶ÔÏó×÷ÎªThread¶ÔÏóµÄtarget´´½¨ÐÂµÄÏß³Ì
-                thread.start();                      //Ïß³Ì½øÈëµ½¾ÍÐ÷×´Ì¬
+                Thread thread = new Thread(ft);   //FutureTaskï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªThreadï¿½ï¿½ï¿½ï¿½ï¿½targetï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ß³ï¿½
+                thread.start();                      //ï¿½ß³Ì½ï¿½ï¿½ëµ½ï¿½ï¿½ï¿½ï¿½×´Ì¬
             }
         }
 
-        System.out.println("Ö÷Ïß³ÌforÑ­»·Ö´ÐÐÍê±Ï..");
+        System.out.println("ï¿½ï¿½ï¿½ß³ï¿½forÑ­ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½..");
         
         try {
-            int sum = ft.get();            //È¡µÃÐÂ´´½¨µÄÐÂÏß³ÌÖÐµÄcall()·½·¨·µ»ØµÄ½á¹û
+            int sum = ft.get();            //È¡ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½Ðµï¿½call()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØµÄ½ï¿½ï¿½
             System.out.println("sum = " + sum);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -37,7 +37,7 @@ public class ThreadTest {
 class MyCallable implements Callable<Integer> {
     private int i = 0;
 
-    // Óërun()·½·¨²»Í¬µÄÊÇ£¬call()·½·¨¾ßÓÐ·µ»ØÖµ
+    // ï¿½ï¿½run()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½Ç£ï¿½call()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½Öµ
     @Override
     public Integer call() {
         int sum = 0;
@@ -48,4 +48,6 @@ class MyCallable implements Callable<Integer> {
         return sum;
     }
 
+    
+    
 }
