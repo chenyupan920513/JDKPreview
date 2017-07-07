@@ -1,7 +1,6 @@
 package cycle;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**  
@@ -27,11 +26,11 @@ public class ForCircleTest {
 	  	for(int i=0;i<100;i++){
 	  		list.add("hah");
 	  	}
-		System.out.println(new Date().getTime());
+		System.out.println(System.currentTimeMillis());
 		for1();
-		System.out.println(new Date().getTime());
+		System.out.println(System.currentTimeMillis());
 		for2();
-		System.out.println(new Date().getTime());
+		System.out.println(System.currentTimeMillis());
 		
 	}
 	
