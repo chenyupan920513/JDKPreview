@@ -1,4 +1,4 @@
-package com.cyp.block;
+package com.cyp.thread.block;
 
 public class StaticThreadRun {
 	
@@ -7,7 +7,6 @@ public class StaticThreadRun {
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
 				ThreadStatic.staticBlock();
 				
 			}},"t1");
@@ -15,7 +14,6 @@ public class StaticThreadRun {
 			
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
 				ThreadStatic.staticMethod();
 			}},"t2");
 

@@ -1,18 +1,18 @@
-package com.cyp.block;
+package com.cyp.thread.block;
 
 public class TextThread {
 
 	public static void main(String[] args) {
 		TxtThread tt = new TxtThread();
 		TxtThread tt2 = new TxtThread();
-		new Thread(tt,"线程1").start();
-		new Thread(tt,"线程2").start();
-		new Thread(tt,"线程3").start();
-		new Thread(tt,"线程4").start();
-		new Thread(tt2,"线程t1").start();
-		new Thread(tt2,"线程t2").start();
-		new Thread(tt2,"线程t3").start();
-		new Thread(tt2,"线程t4").start();
+		new Thread(tt,"绾跨▼1").start();
+		new Thread(tt,"绾跨▼2").start();
+		new Thread(tt,"绾跨▼3").start();
+		new Thread(tt,"绾跨▼4").start();
+		new Thread(tt2,"绾跨▼t1").start();
+		new Thread(tt2,"绾跨▼t2").start();
+		new Thread(tt2,"绾跨▼t3").start();
+		new Thread(tt2,"绾跨▼t4").start();
 	}
 }
 

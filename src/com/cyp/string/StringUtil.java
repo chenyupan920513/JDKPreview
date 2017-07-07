@@ -1,6 +1,8 @@
 package com.cyp.string;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * @author pierre
@@ -26,6 +28,11 @@ public class StringUtil {
 	    Integer intHao = Integer.parseInt(liuShuiHao);
 	    intHao++;
 	    DecimalFormat df = new DecimalFormat(STR_FORMAT);
-	    return df.format(intHao);
+		LinkedList list = new LinkedList();
+		ArrayList list2 = new ArrayList();
+		list.add(1);
+		list.add(2);
+		return df.format(intHao);
+
 	}
 }

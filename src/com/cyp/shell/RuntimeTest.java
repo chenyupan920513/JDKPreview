@@ -16,18 +16,17 @@ public class RuntimeTest {
         Process process = null;
         Runtime rt = Runtime.getRuntime();
         try {
-            process = rt.exec("ls -la");
+            process = rt.exec("ipconfig");
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
             process.waitFor();
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         InputStream is = process.getInputStream();
-        BufferedReader br = new BufferedReader(new InputStreamReader(is)); 
+        BufferedReader br = new BufferedReader(new InputStreamReader(is,"gbk"));
         String b;
         while((b=br.readLine())!=null){
             System.out.println(b);

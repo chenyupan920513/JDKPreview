@@ -1,4 +1,4 @@
-package com.cyp.block;
+package com.cyp.thread.block;
 
 public class Thread2 {  
     public void m4t1() {  

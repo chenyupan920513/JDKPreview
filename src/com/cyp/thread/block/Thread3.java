@@ -1,4 +1,4 @@
-package com.cyp.block;
+package com.cyp.thread.block;
 
 public class Thread3 { 
     class Inner { 
@@ -23,9 +23,9 @@ public class Thread3 {
               } 
          } 
     } 
-    private void m4t1(Inner inner) { 
-         synchronized(inner) { //使用对象锁 
-         inner.m4t1(); 
+    private void m4t1(Inner inner) {
+         synchronized(inner) {
+         inner.m4t1();
          }
     } 
     private void m4t2(Inner inner) { 
@@ -33,10 +33,10 @@ public class Thread3 {
     } 
     public static void main(String[] args) { 
          final Thread3 myt3 = new Thread3(); 
-         final Inner inner = myt3.new Inner(); 
-         Thread t1 = new Thread( new Runnable() {public void run() { myt3.m4t1(inner);} }, "t1"); 
-    Thread t2 = new Thread( new Runnable() {public void run() { myt3.m4t2(inner);} }, "t2"); 
-    t1.start(); 
+         final Inner inner = myt3.new Inner();
+         Thread t1 = new Thread( new Runnable() {public void run() { myt3.m4t1(inner);} }, "t1");
+    Thread t2 = new Thread( new Runnable() {public void run() { myt3.m4t2(inner);} }, "t2");
+    t1.start();
     t2.start(); 
  } 
 }

@@ -1,4 +1,4 @@
-package com.cyp.block;
+package com.cyp.thread.block;
 
 public class Test implements Runnable{
 	 public void run() {  

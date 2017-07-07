@@ -1,4 +1,4 @@
-package com.cyp.block;
+package com.cyp.thread.block;
 
 public class ThreadStatic{
 	public synchronized static void  staticMethod(){
@@ -7,7 +7,6 @@ public class ThreadStatic{
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		System.out.println(Thread.currentThread().getName()+"== method "+i--);
@@ -22,7 +21,6 @@ public class ThreadStatic{
 				try {
 					Thread.sleep(100);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			System.out.println(Thread.currentThread().getName()+"== Block "+i--);
@@ -38,7 +36,6 @@ public class ThreadStatic{
 				try {
 					Thread.sleep(100);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				System.out.println(Thread.currentThread().getName()+"== Block "+i--);
@@ -54,7 +51,6 @@ public class ThreadStatic{
 				try {
 					Thread.sleep(100);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				System.out.println(Thread.currentThread().getName()+"== Block "+i--);
