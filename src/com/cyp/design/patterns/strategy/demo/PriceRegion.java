@@ -1,4 +1,4 @@
-package com.cyp.design.patterns.strategy.retention;
+package com.cyp.design.patterns.strategy.demo.retention;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

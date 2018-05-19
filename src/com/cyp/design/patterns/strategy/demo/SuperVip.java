@@ -1,6 +1,6 @@
-package com.cyp.design.patterns.strategy;
+package com.cyp.design.patterns.strategy.demo;
 
-import com.cyp.design.patterns.strategy.retention.PriceRegion;
+import com.cyp.design.patterns.strategy.demo.retention.PriceRegion;
 
 /**
  * Created by Administrator on 2017/4/14.

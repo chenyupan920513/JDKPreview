@@ -1,8 +1,9 @@
-package com.cyp.design.patterns.strategy;
+package com.cyp.design.patterns.strategy.demo;
 
-import com.cyp.design.patterns.strategy.retention.PriceRegion;
+import com.cyp.design.patterns.strategy.demo.retention.PriceRegion;
 
 import java.io.File;
+import java.lang.annotation.Annotation;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class CalPriceFactory {
         //在策略列表查找策略
         for (Class<? extends CalPrice> clazz : calPriceList) {
             PriceRegion validRegion = clazz.getAnnotation(PriceRegion.class);//获取该策略的注解
-            if(validRegion == null )
+            if (validRegion == null)
                 continue;
             //判断金额是否在注解的区间
             if (player.getTotalAmount() >= validRegion.min() && player.getTotalAmount() < validRegion.max()) {
@@ -39,7 +40,7 @@ public class CalPriceFactory {
 
     //处理注解，我们传入一个策略类，返回它的注解
     private PriceRegion handleAnnotation(Class<? extends CalPrice> clazz) {
-/*        Annotation[] annotations = clazz.getDeclaredAnnotations();
+        Annotation[] annotations = clazz.getDeclaredAnnotations();
         if (annotations == null || annotations.length == 0) {
             return null;
         }
@@ -47,7 +48,7 @@ public class CalPriceFactory {
             if (annotations[i] instanceof PriceRegion) {
                 return (PriceRegion) annotations[i];
             }
-        }*/
+        }
 
         return clazz.getAnnotation(PriceRegion.class);
     }
@@ -58,15 +59,11 @@ public class CalPriceFactory {
     }
 
     //在工厂初始化时要初始化策略列表
-    private void init()  {
+    private void init() {
         calPriceList = new ArrayList<>();
-        File[] resources = new File[0];//获取到包下所有的class文件
-        try {
-            resources = getResources();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        Class<CalPrice> calPriceClazz ;
+        //获取到包下所有的class文件
+        File[] resources = getResources();
+        Class<CalPrice> calPriceClazz;
         try {
             calPriceClazz = (Class<CalPrice>) classLoader.loadClass(CalPrice.class.getName());//使用相同的加载器加载策略接口
         } catch (ClassNotFoundException e1) {
@@ -87,7 +84,7 @@ public class CalPriceFactory {
     }
 
     //获取扫描的包下面所有的class文件
-    private File[] getResources() throws URISyntaxException {
+    private File[] getResources() {
         try {
             File file = new File(classLoader.getResource(CAL_PRICE_PACKAGE.replace(".", "/")).toURI());
             return file.listFiles(pathname -> {
@@ -106,7 +103,6 @@ public class CalPriceFactory {
     }
 
     private static class CalPriceFactoryInstance {
-
         private static CalPriceFactory instance = new CalPriceFactory();
     }
 }
