@@ -1,4 +1,4 @@
-package com.cyp.design.patterns.observer;
+package cyp.design.patterns.observer;
 
 /**
  * @Author pierre.chen
@@ -7,11 +7,11 @@ package com.cyp.design.patterns.observer;
  */
 public class ObserverPatternDemo {
     public static void main(String[] args) {
-        Subject subject = new Subject();
+        com.cyp.design.patterns.observer.Subject subject = new com.cyp.design.patterns.observer.Subject();
 
-        subject.addObserver(new HexaObserver());
+        subject.addObserver(new com.cyp.design.patterns.observer.HexaObserver());
         subject.addObserver(new OctalObserver());
-        subject.addObserver(new BinaryObserver());
+        subject.addObserver(new com.cyp.design.patterns.observer.BinaryObserver());
 
         System.out.println("First state change: 15");
         subject.setState(15);

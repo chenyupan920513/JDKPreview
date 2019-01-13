@@ -1,7 +1,5 @@
 package jvm.overload;
 
-import java.io.Serializable;
-
 /**
  * @Author pierre
  * 18-3-9
@@ -35,7 +33,7 @@ public class Overload {
 //        System.out.println("hello Serializable !");
 //    }
 
-//    public static void sayHello(Comparable<Character> karg) {
+    //    public static void sayHello(Comparable<Character> karg) {
 //        System.out.println("hello Serializable !");
 //    }
 //

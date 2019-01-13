@@ -1,10 +1,10 @@
-package com.cyp.hook;
+package cyp.hook;
 
 public class HookTest {
     @SuppressWarnings("deprecation")
     public static void main(String[] args) throws Exception {
         //启用退出JVM时执行Finalizer
-        Runtime.runFinalizersOnExit(true);
+        Runtime.getRuntime().runFinalization();
         MyHook hook1 = new MyHook("Hook1");
         MyHook hook2 = new MyHook("Hook2");
         MyHook hook3 = new MyHook("Hook3");
@@ -34,7 +34,7 @@ class MyHook extends Thread {
     }
 
     //重写Finalizer，将在关闭钩子后调用
-    protected void finalize() throws Throwable {
+    protected void finalize() {
         System.out.println(name + " Finalize.");
     }
 
