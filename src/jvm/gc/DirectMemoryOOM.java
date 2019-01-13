@@ -1,7 +1,8 @@
 package jvm.gc;
 
-import java.lang.reflect.Field;
 import sun.misc.Unsafe;
+
+import java.lang.reflect.Field;
 
 /**
  * @Author pierre 18-2-27
